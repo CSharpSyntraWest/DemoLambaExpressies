@@ -25,7 +25,7 @@ namespace Demo2LamdaExpressies
             }
             Console.WriteLine();
             //Korter via lamda-expressie:
-            Console.WriteLine("zelfde maar via Lamba-expressie:");
+            Console.WriteLine("zelfde maar via Lambda-expressie:");
             List<int> evenGetallenLijstLamba = getallenLijst.FindAll(getal => getal % 2 == 0);
             evenGetallenLijstLamba.ForEach(g => Console.Write(g + " "));
             Console.WriteLine("\nGetallen groter dan 5:");
@@ -38,11 +38,10 @@ namespace Demo2LamdaExpressies
             }
             Console.WriteLine();
             //Korter, via Lambda-expressie:
-            Console.WriteLine("Getallen > 5 maar via Lamba-expressie:");
+            Console.WriteLine("Getallen > 5 maar via Lambda-expressie:");
             List<int> getallenGroterDan5MetLambda = getallenLijst.FindAll(g => g > 5);
             getallenGroterDan5MetLambda.ForEach(getal => Console.Write(getal + " "));
-
-            //Oefening: Maak een nieuwe lijst uit getallenLijst van de getallen >= 2 en < 7
+            //Oefening: Maak een nieuwe lijst uit getallenLijst met enkel de getallen >= 2 en < 7
             //via een lamba-expressie en druk de lijst af via ForEach
 
         }
