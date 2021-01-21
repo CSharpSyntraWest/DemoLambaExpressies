@@ -16,7 +16,7 @@ namespace Demo2LamdaExpressies
         }
         static void Main(string[] args)
         {
-            List<int> getallenLijst= new List<int> { 1, 2, 3, 4, 5, 6, 7, 8 };
+            List<int> getallenLijst= new List<int> { -8, 5, 50, -6, 2, 3, 7, 5 };
             Predicate<int> pred = IsEven;
             List<int> evenGetallenLijst = getallenLijst.FindAll(pred);
             foreach (int g in evenGetallenLijst)
@@ -41,9 +41,16 @@ namespace Demo2LamdaExpressies
             Console.WriteLine("Getallen > 5 maar via Lambda-expressie:");
             List<int> getallenGroterDan5MetLambda = getallenLijst.FindAll(g => g > 5);
             getallenGroterDan5MetLambda.ForEach(getal => Console.Write(getal + " "));
-            //Oefening: Maak een nieuwe lijst uit getallenLijst met enkel de getallen >= 2 en < 7
+            //Oefening 1: Maak een nieuwe lijst uit getallenLijst met enkel de getallen >= 2 en < 7
             //via een lamba-expressie en druk de lijst af via ForEach
-
+            Console.WriteLine("\nGetallen >=2 en < 7  via Lambda-expressie:");
+            List<int> getallenTussen2en6 = getallenLijst.FindAll(g => g >=2 && g < 7);
+            getallenTussen2en6.ForEach(g => Console.Write(g + " "));
+            //Oefening 2: Gebruik RemoveAll om alle getallen groter dan 3 te verwijderen uit getallenLijst
+            //en druk de aangepaste lijst af met ForEach
+            Console.WriteLine("\nVerwijder getallen uit getallenLijst > 3  via Lambda-expressie:");
+            getallenLijst.RemoveAll(g => g > 3);
+            getallenLijst.ForEach(g => Console.Write(g + " "));
         }
     }
 }
